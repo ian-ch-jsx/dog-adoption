@@ -11,7 +11,8 @@ function App() {
         <NavLink to="/">Adoptable Dogs</NavLink>
         <Switch>
           <Route path="/" exact component={Dogs} />
-          <Route path="/dog" component={Dog} />
+          <Route path="/dogs" exact component={Dogs} />
+          <Route path="/dogs/:id" component={Dog} />
         </Switch>
       </BrowserRouter>
     </div>
