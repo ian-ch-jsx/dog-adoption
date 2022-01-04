@@ -1,5 +1,10 @@
 import React from 'react';
+import DogCard from './DogCard';
 
 export default function Dogs() {
-  return <div>test</div>;
+  return (
+    <div>
+      <DogCard />
+    </div>
+  );
 }
