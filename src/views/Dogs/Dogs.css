@@ -7,9 +7,11 @@
 
 .dog-card {
   margin: 20px;
+  width: 300px;
+  height: 350px;
   padding: 40px 40px 30px 40px;
   background-color: #d6ccc2;
-  border-radius: 0px;
+  border: 1px solid #d4c5b8;
 }
 
 .dog-card:hover {
@@ -20,7 +22,7 @@
 .dog-info {
   display: flex;
   flex-direction: column;
-  margin: auto;
+  margin: auto auto 40px auto;
   align-items: center;
   width: fit-content;
   padding: 20px 50px 20px 50px;
@@ -42,15 +44,21 @@
 }
 
 h1 {
+  font-family: 'Poppins', sans-serif;
+  color: #6e5b49;
   font-size: 1.5rem;
   margin: 10px;
+  letter-spacing: 2px;
 }
 
 h2 {
+  color: #6e5b49;
   font-size: 1.2rem;
   margin: 5px;
 }
 p {
+  font-family: 'Poppins', sans-serif;
+  color: #5c4c3d;
   margin: 10px;
 }
 

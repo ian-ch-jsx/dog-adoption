@@ -23,7 +23,9 @@ export default function DogCard() {
           <Link to={`/dogs/${dog.id}`} key={dog.id}>
             <img src={dog.image} className="image-preview"></img>
             <h1>{dog.name}</h1>
-            <p>{dog.breed}</p>
+            <p>
+              {dog.age} year old {dog.breed}
+            </p>
           </Link>
         </div>
       ))}

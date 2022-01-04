@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
+
 body {
   background-color: #faf5f0;
 }
@@ -14,15 +16,23 @@ body {
   justify-content: center;
   padding: 10px;
   margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 5px;
   color: #6e5b49;
+  filter: drop-shadow(3px 3px 3px #b6a391);
 }
 
 .App-header a {
   text-transform: uppercase;
   font-size: 0.8rem;
   text-decoration: underline;
+  letter-spacing: normal;
 }
 
 .App-header a:hover {
   font-weight: bold;
+}
+
+.App-header h1 {
+  font-size: 1.8rem;
 }
