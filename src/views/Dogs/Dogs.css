@@ -1,0 +1,17 @@
+.dog-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.dog-card {
+  margin: 20px;
+}
+
+.image-preview {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50px;
+}
