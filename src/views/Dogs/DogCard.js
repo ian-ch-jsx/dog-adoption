@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { getDogs } from '../../services/dogs';
 import './Dogs.css';
 
@@ -11,7 +12,6 @@ export default function DogCard() {
       const data = await getDogs();
       setDogs(data);
       setLoading(false);
-      // console.log(data);
     };
     fetchData();
   }, []);
@@ -20,9 +20,11 @@ export default function DogCard() {
     <div className="dog-container">
       {dogs.map((dog) => (
         <div className="dog-card" key={dog.id}>
-          <p>{dog.name}</p>
-          <p>{dog.breed}</p>
-          <img src={dog.image} className="image-preview"></img>
+          <Link to={`/dogs/${dog.id}`} key={dog.id}>
+            <h1>{dog.name}</h1>
+            <p>{dog.breed}</p>
+            <img src={dog.image} className="image-preview"></img>
+          </Link>
         </div>
       ))}
     </div>
