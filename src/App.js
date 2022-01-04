@@ -8,7 +8,10 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <NavLink to="/">Adoptable Dogs</NavLink>
+        <div className="App-header">
+          <h1>Doggo Emporium</h1>
+          <NavLink to="/">view adoptable dogs</NavLink>
+        </div>
         <Switch>
           <Route path="/" exact component={Dogs} />
           <Route path="/dogs" exact component={Dogs} />
