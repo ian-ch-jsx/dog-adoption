@@ -20,11 +20,9 @@ export default function DogList() {
   return (
     <div className="dog-container">
       {dogs.map((dog) => (
-        <div className="dog-card" key={dog.id}>
-          <Link to={`/dogs/${dog.id}`} key={dog.id}>
-            <DogCard {...dog} />
-          </Link>
-        </div>
+        <Link to={`/dogs/${dog.id}`} key={dog.id}>
+          <DogCard {...dog} />
+        </Link>
       ))}
     </div>
   );

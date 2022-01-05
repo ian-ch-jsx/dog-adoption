@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getDogById } from '../../services/dogs';
+import DogDetail from '../../components/Dog/DogDetail';
 import './Dogs.css';
 
 export default function Dog(props) {
@@ -16,13 +17,5 @@ export default function Dog(props) {
   }, [props.match.params.id]);
   if (loading) return <h1>loading</h1>;
 
-  return (
-    <div className="dog-info">
-      <h1>{dog.name}</h1>
-      <img src={dog.image} className="dog-image"></img>
-      <h2>{dog.breed}</h2>
-      <p>{dog.age} year(s) old.</p>
-      <p>{dog.bio}</p>
-    </div>
-  );
+  return <DogDetail {...dog} />;
 }

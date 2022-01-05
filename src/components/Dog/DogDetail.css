@@ -1,0 +1,15 @@
+.dog-info {
+  display: flex;
+  flex-direction: column;
+  margin: auto auto 40px auto;
+  align-items: center;
+  width: 700px;
+  padding: 20px 50px 20px 50px;
+  background-color: #d6ccc2;
+}
+
+.dog-image {
+  margin: 10px;
+  width: 500px;
+  filter: drop-shadow(2px 2px 3px #b6a391);
+}
