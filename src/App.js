@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <div className="App-header">
-          <h1>Doggo Emporium</h1>
+          <h1>Pet Emporium</h1>
           <NavLink to="/">view adoptable dogs</NavLink>
         </div>
         <Switch>
