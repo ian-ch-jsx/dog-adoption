@@ -1,7 +1,7 @@
 import { checkError, client } from './client';
 
 export async function getDogs() {
-  const resp = await client.from('pets').select('*').order('name');
+  const resp = await client.from('pets').select('*').order('species');
   return checkError(resp);
 }
 
