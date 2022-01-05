@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getDogById } from '../../services/dogs';
 import DogDetail from '../../components/Dog/DogDetail';
+import { NavLink } from 'react-router-dom';
 import './Dogs.css';
 
 export default function Dog(props) {
@@ -17,5 +18,10 @@ export default function Dog(props) {
   }, [props.match.params.id]);
   if (loading) return <h1>loading</h1>;
 
-  return <DogDetail {...dog} />;
+  return (
+    <>
+      <DogDetail {...dog} />
+      <NavLink to={`/dogs/edit/${dog.id}`}>edit pet</NavLink>
+    </>
+  );
 }

@@ -12,7 +12,6 @@ function App() {
         <div className="App-header">
           <h1>Pet Emporium</h1>
           <NavLink to="/">view adoptable pets</NavLink>
-          <NavLink to="/dogs/edit/:id">edit pet</NavLink>
         </div>
         <Switch>
           <Route path="/" exact component={DogList} />
