@@ -1,6 +1,6 @@
 import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
 import { NavLink, Switch, Route } from 'react-router-dom';
-import Dogs from './views/Dogs/Dogs.js';
+import DogList from './views/Dogs/DogList.js';
 import Dog from './views/Dogs/Dog.js';
 import './App.css';
 
@@ -10,11 +10,11 @@ function App() {
       <BrowserRouter>
         <div className="App-header">
           <h1>Pet Emporium</h1>
-          <NavLink to="/">view adoptable dogs</NavLink>
+          <NavLink to="/">view adoptable pets</NavLink>
         </div>
         <Switch>
-          <Route path="/" exact component={Dogs} />
-          <Route path="/dogs" exact component={Dogs} />
+          <Route path="/" exact component={DogList} />
+          <Route path="/dogs" exact component={DogList} />
           <Route path="/dogs/:id" component={Dog} />
         </Switch>
       </BrowserRouter>
