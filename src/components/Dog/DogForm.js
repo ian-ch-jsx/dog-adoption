@@ -13,6 +13,7 @@ export default function DogForm({
   setBreed,
   species,
   setSpecies,
+  updateButton,
 }) {
   return (
     <div className="update">
@@ -85,7 +86,7 @@ export default function DogForm({
           />
         </div>
         <div className="button">
-          <button>Save</button>
+          <button onClick={updateButton}>Save</button>
         </div>
       </form>
     </div>
