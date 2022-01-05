@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { getDogs } from '../../services/dogs';
+import DogCard from '../../components/Dog/DogCard';
 import './Dogs.css';
 
-export default function DogCard() {
+export default function DogList() {
   const [dogs, setDogs] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -21,11 +22,7 @@ export default function DogCard() {
       {dogs.map((dog) => (
         <div className="dog-card" key={dog.id}>
           <Link to={`/dogs/${dog.id}`} key={dog.id}>
-            <img src={dog.image} className="image-preview"></img>
-            <h1>{dog.name}</h1>
-            <p>
-              {dog.age} year old {dog.breed}
-            </p>
+            <DogCard {...dog} />
           </Link>
         </div>
       ))}

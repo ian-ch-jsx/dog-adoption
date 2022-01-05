@@ -1,6 +1,6 @@
 import React from 'react';
-import DogCard from './DogCard';
+import DogList from './DogList';
 
 export default function Dogs() {
-  return <DogCard />;
+  return <DogList />;
 }
