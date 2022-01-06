@@ -5,6 +5,10 @@
   margin: auto;
 }
 
+.detail-container {
+  margin-bottom: 30px;
+}
+
 h1 {
   font-family: 'Poppins', sans-serif;
   color: #6e5b49;

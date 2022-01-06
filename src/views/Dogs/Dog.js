@@ -19,9 +19,11 @@ export default function Dog(props) {
   if (loading) return <h1>loading</h1>;
 
   return (
-    <>
+    <div className="detail-container">
       <DogDetail {...dog} />
-      <NavLink to={`/dogs/edit/${dog.id}`}>edit pet</NavLink>
-    </>
+      <NavLink to={`/dogs/edit/${dog.id}`}>
+        <button>edit pet</button>
+      </NavLink>
+    </div>
   );
 }
