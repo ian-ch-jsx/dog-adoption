@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import { addDog } from '../../services/dogs';
 import DogForm from '../../components/Dog/DogForm';
 
@@ -10,9 +11,12 @@ export default function DogEdit() {
   const [image, setImage] = useState('');
   const [bio, setBio] = useState('');
 
+  const history = useHistory();
+
   const updateButton = async (e) => {
     e.preventDefault();
     await addDog({ name, species, breed, age, image, bio });
+    history.push('/');
   };
   return (
     <div>

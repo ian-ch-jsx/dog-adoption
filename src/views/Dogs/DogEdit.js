@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import { updateDog, getDogById } from '../../services/dogs';
 import DogForm from '../../components/Dog/DogForm';
@@ -27,9 +28,11 @@ export default function DogEdit() {
     fetchData();
   }, [params.id]);
 
+  const history = useHistory();
   const updateButton = async (e) => {
     e.preventDefault();
     await updateDog(params.id, name, species, breed, age, image, bio);
+    history.push(`/dogs/${params.id}`);
   };
   return (
     <div>

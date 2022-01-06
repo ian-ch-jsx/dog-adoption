@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import { getDogById, deleteDog } from '../../services/dogs';
 import DogDetail from '../../components/Dog/DogDetail';
 import { NavLink } from 'react-router-dom';
@@ -17,9 +18,11 @@ export default function Dog(props) {
     fetchData();
   }, [props.match.params.id]);
 
+  const history = useHistory();
   const updateButton = async (e) => {
     e.preventDefault();
     await deleteDog(props.match.params.id);
+    history.push('/');
   };
 
   if (loading) return <h1>loading</h1>;
