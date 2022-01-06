@@ -22,3 +22,8 @@ export async function addDog(pet) {
   const resp = await client.from('pets').insert(pet);
   return checkError(resp);
 }
+
+export async function deleteDog(id) {
+  const resp = await client.from('pets').delete().match({ id });
+  return checkError(resp);
+}
