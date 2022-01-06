@@ -20,7 +20,7 @@ export default function DogEdit() {
   };
   return (
     <div>
-      <h1>Add pet:</h1>
+      <h1>Add pet</h1>
       <DogForm
         name={name}
         setName={setName}

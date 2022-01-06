@@ -1,0 +1,19 @@
+body {
+  color: #5c4c3d;
+}
+
+input {
+  margin: 10px;
+  width: 200px;
+  border: 0px;
+  background-color: #d6ccc2;
+  color: #5c4c3d;
+  padding: 10px 15px 10px 15px;
+  border-radius: 50px;
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
