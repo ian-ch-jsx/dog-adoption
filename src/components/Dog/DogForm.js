@@ -18,7 +18,6 @@ export default function DogForm({
   return (
     <div className="update">
       <form>
-        <h2>update pet</h2>
         <div className="control">
           <label>name:</label>
           <input
@@ -56,7 +55,7 @@ export default function DogForm({
           <label>age:</label>
           <input
             placeholder="age"
-            type="text"
+            type="number"
             value={age}
             onChange={(e) => {
               setAge(e.target.value);
