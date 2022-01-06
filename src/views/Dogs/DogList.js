@@ -16,6 +16,7 @@ export default function DogList() {
     };
     fetchData();
   }, []);
+
   if (loading) return <h1>loading...</h1>;
   return (
     <div className="dog-container">
