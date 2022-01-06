@@ -19,6 +19,7 @@ export default function Dog(props) {
   }, [props.match.params.id]);
 
   const history = useHistory();
+
   const updateButton = async (e) => {
     e.preventDefault();
     await deleteDog(props.match.params.id);

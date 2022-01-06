@@ -1,10 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
-
-import DogForm from '../../components/Dog/DogForm';
+import Admin from './Admin';
 
 test('should render an edit form', async () => {
-  const { container } = render(<DogForm />);
+  const { container } = render(<Admin />);
 
   await screen.findByText('name:');
 

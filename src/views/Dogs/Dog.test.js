@@ -1,15 +1,13 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import Dog from './Dog';
 
-test.skip('renders dog info', () => {
+test('renders dog info', async () => {
   const { container } = render(
-    <Dog
-      name="Barton"
-      image="https://placedog.net/500?id=6"
-      age={1}
-      breed="Weimaraner"
-      bio="dog is cute"
-    />
+    <MemoryRouter>
+      <Dog match={{ params: { id: 1 } }} />
+    </MemoryRouter>
   );
+  await screen.findByText('Lunchbox');
   expect(container).toMatchSnapshot();
 });

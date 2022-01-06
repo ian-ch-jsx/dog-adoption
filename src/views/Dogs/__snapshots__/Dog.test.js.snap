@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders dog info 1`] = `
+<div>
+  <div
+    class="detail-container"
+  >
+    <div
+      class="dog-info"
+    >
+      <h1>
+        Lunchbox
+      </h1>
+      <img
+        class="dog-image"
+        src="https://placedog.net/1000/563?id=28"
+      />
+      <h2>
+        Samoyed
+      </h2>
+      <p>
+        0
+         year(s) old.
+      </p>
+      <p>
+        Lunchbox is an energetic, loving pup with no fear and a ton of fur.
+      </p>
+    </div>
+    <a
+      href="/dogs/edit/1"
+    >
+      <button>
+        edit pet
+      </button>
+    </a>
+    <button>
+      Delete Pet
+    </button>
+  </div>
+</div>
+`;
