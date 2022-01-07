@@ -11,6 +11,7 @@ export default function DogEdit() {
   const [age, setAge] = useState('');
   const [image, setImage] = useState('');
   const [bio, setBio] = useState('');
+  const [message, setMessage] = useState('');
 
   const params = useParams();
 
@@ -29,14 +30,23 @@ export default function DogEdit() {
   }, [params.id]);
 
   const history = useHistory();
+
   const updateButton = async (e) => {
-    e.preventDefault();
-    await updateDog(params.id, name, species, breed, age, image, bio);
-    history.push(`/dogs/${params.id}`);
+    try {
+      e.preventDefault();
+      await updateDog(params.id, name, species, breed, age, image, bio);
+      setMessage('The pet bio has been updated successfully.');
+      setTimeout(() => {
+        history.push(`/dogs/${params.id}`);
+      }, 2000);
+    } catch {
+      setMessage('Something went wrong!');
+    }
   };
   return (
     <div>
       <h1>Edit Pet</h1>
+      <p>{message}</p>
       <DogForm
         name={name}
         setName={setName}
