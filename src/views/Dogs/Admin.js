@@ -10,17 +10,26 @@ export default function DogEdit() {
   const [age, setAge] = useState('');
   const [image, setImage] = useState('');
   const [bio, setBio] = useState('');
+  const [message, setMessage] = useState('');
 
   const history = useHistory();
 
   const updateButton = async (e) => {
-    e.preventDefault();
-    await addDog({ name, species, breed, age, image, bio });
-    history.push('/');
+    try {
+      e.preventDefault();
+      await addDog({ name, species, breed, age, image, bio });
+      setMessage('Pet added successfully.');
+      setTimeout(() => {
+        history.push('/');
+      }, 2000);
+    } catch {
+      setMessage('Something went wrong!');
+    }
   };
   return (
     <div>
       <h1>Add pet</h1>
+      <p>{message}</p>
       <DogForm
         name={name}
         setName={setName}
